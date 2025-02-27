@@ -1,0 +1,140 @@
+.home__text-1 .title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.home__text-1 .subtitle {
+  display: inline-block;
+  white-space: normal;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  white-space: wrap;
+  margin: 0;
+}
+
+.cursor {
+  border-right: 2px solid #1f305e;
+  display: inline-block;
+  width: 0.1em;
+  height: 24px;
+  animation: blink-caret 0.75s 3.5s step-end infinite;
+  display: inline-flex;
+  align-self: end;
+  position: relative;
+  bottom: -4px;
+  left: -4px;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #1f305e;
+  }
+}
+
+.home__text-badges {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  opacity: 0;
+  animation: slide-up 1s 3.6s forwards;
+}
+
+.home__text-badges .chakra-badge {
+  font-size: 18px;
+  padding: 4px;
+  background-color: #1f305e;
+  width: min-content;
+  color: white;
+}
+
+.home__profile-pic {
+  padding-top: 20px;
+  max-width: 100%;
+}
+
+.home__profile-pic img {
+  max-height: 350px;
+  justify-self: center;
+}
+
+.home__button-cv {
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  display: flex;
+  justify-self: center;
+  margin-top: 6px;
+  width: 50%;
+  justify-content: center;
+}
+
+.home__button-cv:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.home__text-1 {
+  padding: 1rem 2rem;
+}
+
+@media screen and (min-width: 680px) {
+  .home__text-1 .title {
+    letter-spacing: 0.12em;
+    font-size: 50px;
+  }
+  .home__text-1 .subtitle {
+    display: inline-block;
+    font-size: 36px;
+    letter-spacing: 0.12em;
+  }
+  .cursor {
+    border-right: 2px solid #1f305e;
+    display: inline-block;
+    width: 0.12em;
+    height: 40px;
+    animation: blink-caret 0.75s 3.5s step-end infinite;
+    display: inline-block;
+    align-self: end;
+    position: relative;
+    bottom: -6px;
+    left: -18px;
+  }
+  .home__text-1 {
+    padding: 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    height: 100%;
+  }
+  .home__text-badges .chakra-badge {
+    font-size: 22px;
+    padding: 8px;
+  }
+
+  .home__profile-pic img {
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home__text-1 .title {
+    font-size: 60px;
+  }
+  .home__text-1 .subtitle {
+    font-size: 42px;
+  }
+  .home__text-1 {
+    padding: 2rem 6rem;
+  }
+  .home__profile-pic {
+    margin-left: 20px;
+  }
+}

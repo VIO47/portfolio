@@ -1,0 +1,29 @@
+.projects {
+  padding: 1rem 2rem;
+  &-code {
+    padding-bottom: 10px;
+
+    &__list {
+      display: grid;
+      padding-top: 8px;
+      gap: 12px;
+    }
+  }
+
+  &-ux {
+    &__list {
+      display: grid;
+      padding-top: 8px;
+      gap: 12px;
+    }
+  }
+
+  @media screen and (min-width: 680px) {
+    padding: 0 5rem;
+
+    .projects-code__list,
+    .projects-ux__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

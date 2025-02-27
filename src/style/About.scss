@@ -1,0 +1,131 @@
+.about {
+  width: 100%;
+  color: var(--primary-color);
+
+  h2 {
+    font-weight: 600;
+    max-width: 450px;
+  }
+
+  h4 {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .content-section {
+    padding: 1rem 2rem;
+  }
+
+  &__text-1 {
+    width: 100%;
+
+    &__grid {
+      row-gap: 14px;
+    }
+  }
+
+  &__text-2 {
+    &__grid {
+      display: grid;
+    }
+
+    &__1 {
+      padding-bottom: 14px;
+    }
+
+    &__2 {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      justify-self: center;
+      max-width: 750px;
+    }
+  }
+
+  &__text-3 {
+    > h2 {
+      justify-self: center;
+      margin-bottom: 12px;
+    }
+
+    & .title,
+    & .subtitle {
+      color: var(--burgundy);
+    }
+
+    &__3 {
+      gap: 14px;
+      display: grid;
+    }
+
+    hr {
+      margin: 20px 0;
+      height: 8px;
+      --global-color-border: var(--primary-color);
+    }
+
+    &__grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    &__capm {
+      margin-top: 18px;
+    }
+  }
+}
+
+.half-center-grid {
+  display: grid;
+  justify-content: center;
+}
+
+@media screen and (max-width: 680px) {
+  .about .half-center-grid {
+    gap: 14px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .about {
+    .content-section {
+      padding: 1.5rem 4rem;
+    }
+
+    &__text h1 {
+      font-size: 42px;
+    }
+  }
+
+  .chakra-card__body {
+    font-size: 16px;
+  }
+
+  .half-center-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    .content-section {
+      padding: 2rem 6rem;
+    }
+
+    &__text-2__grid {
+      grid-template-columns: 500px 1fr;
+      gap: 70px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+  }
+
+  .badge-grid {
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+  }
+}
