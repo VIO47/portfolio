@@ -7,7 +7,7 @@ import Food4 from "@resources/food_4.jpg";
 import Food5 from "@resources/food_5.jpg";
 
 const About = () => {
-  const images = [Food1, Food2, Food3, Food4];
+  const images = [Food1, Food2, Food3, Food4, Food5];
 
   return (
     <div className="about">
@@ -53,7 +53,7 @@ const About = () => {
             </h4>
           </div>
           <div className="about__text-2__2">
-            <ImageCarousel height={400} images={images} time={6000} />
+            <ImageCarousel height={440} images={images} time={6000} />
           </div>
         </div>
       </div>

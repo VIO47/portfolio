@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Button } from "@chakra-ui/react";
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri";
 import "@style/ImageCarousel.scss";
@@ -6,7 +6,7 @@ import "@style/ImageCarousel.scss";
 interface ImageCarouselProps {
   height: number;
   images: string[];
-  time: number;
+  time: number | undefined;
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images, time }) => {
@@ -16,7 +16,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images, time }) =
 
   function changeImageIndex(i: number) {
     setCurrentImage(i);
-    activeTrack();
+    if (time) {
+      activeTrack();
+    }
   }
 
   function activeTrack() {
@@ -27,25 +29,36 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images, time }) =
   }
 
   useEffect(() => {
-    activeTrack();
+    if (time) {
+      activeTrack();
+    }
     return () => clearInterval(intervalRef.current);
   }, []);
 
   function changeImage(offset: number) {
     const index = (currentImage + offset + imagesLength) % imagesLength;
     setCurrentImage(index);
-    activeTrack();
+    if (time) {
+      activeTrack();
+    }
   }
 
+  const disableLeftButton = useMemo(() => {
+    return currentImage === 0 && !time;
+  }, [currentImage, imagesLength, time]);
+
+  const disableRightButton = useMemo(() => {
+    return currentImage === imagesLength - 1 && !time;
+  }, [currentImage, imagesLength, time]);
   return (
-    <div className="carousel">
+    <div className="carousel" style={{"--carousel-height":`${height}px`} as React.CSSProperties}>
       <div
         className="carousel-track"
         style={{ transform: `translateX(-${currentImage * 100}%)` }}
       >
         {images.map((image, index) => (
           <div key={index} className="carousel-image">
-            <img src={image} alt={`${index + 1}`} style={{ height: `${height}px` }} />
+            <img src={image} alt={`${index + 1}`}/>
           </div>
         ))}
       </div>
@@ -64,6 +77,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images, time }) =
         variant="outline"
         className="carousel-button__left"
         onClick={() => changeImage(-1)}
+        disabled={disableLeftButton}
       >
         <RiArrowLeftLine />
       </Button>
@@ -71,6 +85,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images, time }) =
         variant="outline"
         className="carousel-button__right"
         onClick={() => changeImage(1)}
+        disabled={disableRightButton}
       >
         <RiArrowRightLine />
       </Button>

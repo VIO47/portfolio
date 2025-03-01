@@ -26,8 +26,18 @@
         }
     }
 
+    &__content {
+        &__personas {
+            overflow: hidden;
+            
+            img {
+                object-fit: scale-down !important;
+            }
+        }
+    }
+
     @media screen and (min-width: 1200px) {
-        padding: 0 5rem;
+        padding: 0 8rem;
 
         &__header__badges span {
             font-size: 22px;
