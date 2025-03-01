@@ -28,7 +28,7 @@
       padding: 0;
       position: absolute;
       top: 35%;
-      color: var(--burgundy);
+      color: var(--primary-color);
       border: 0;
       height: 40px;
       width: 30px;
@@ -40,7 +40,7 @@
 
       &:hover {
         background-color: transparent;
-        color: color-mix(in srgb, var(--burgundy) 80%, white 20%);
+        color: color-mix(in srgb, var(--primary-color) 80%, var(--secondary-color) 20%);
       }
     }
 
@@ -63,7 +63,7 @@
 
   &.active,
   &:hover {
-    background-color: var(--burgundy);
+    background-color: var(--primary-color);
   }
 }
 

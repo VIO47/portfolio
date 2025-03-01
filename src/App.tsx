@@ -4,6 +4,7 @@ import Projects from "@/Projects.tsx";
 import Navigation from "@/Navigation.tsx";
 import SportBuddy from '@/SportBuddy'
 import './App.css'
+import Footer from '@/Footer.tsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/projects/sport-buddy' element={<SportBuddy/>} />
         </Routes>
       </main>
+      <Footer></Footer>
     </div>
   );
 }

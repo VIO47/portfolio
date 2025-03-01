@@ -1,49 +1,58 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  background-color: var(--teal);
+  background-color: var(--background-color);
   position: sticky;
   top: 0;
   padding: 0.75rem 1.5rem;
   z-index: 2;
 
-  &-tabs {
+  &__tabs {
     display: flex;
     gap: 0.5rem;
     align-items: center;
-  }
 
-  a {
-    border-radius: var(--border-radius);
-    font-size: 0.9rem;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 0.4rem 0.75rem;
-    gap: 0.5rem;
-
-    &:hover {
+    a {
+      border-radius: var(--border-radius);
+      font-size: 0.9rem;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      gap: 0.5rem;
+  
+      &:hover {
+        background-color: var(--primary-light-1);
+        color: var(--secondary-color);
+      }
+    }
+  
+    a[aria-current="page"] {
+      font-weight: bold;
       background-color: var(--primary-color);
-      color: var(--teal);
+      color: var(--secondary-color);
+
+      &:hover {
+        background-color: var(--primary-light-1);
+      }
     }
   }
 
-  a[aria-current="page"] {
-    font-weight: bold;
-    background-color: var(--primary-color);
-    color: var(--teal);
-  }
+  
 
-  &-icons {
+  &__icons {
     gap: 8px;
+    display: inline-flex;
 
     svg {
+      width: 20px;
       height: 100%;
-      width: 100%;
       color: var(--primary-color);
 
       &:hover {
-        color: var(--teal);
+        color: var(--primary-light-1);
+        background-color: var(--background-color);
+        border: 0;
         padding: 0;
       }
     }
@@ -55,7 +64,7 @@
     padding: 0;
 
     &:hover {
-      background-color: var(--teal);
+      background-color: var(--background-color);
     }
   }
 }
@@ -64,13 +73,18 @@
   .navigation {
     padding: 1.5rem;
 
-    a {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
+    &__tabs {
+      gap: 1rem;
+      a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
     }
 
-    &-tabs {
-      gap: 1rem;
+    &__icons {
+      svg {
+        width: 30px;
+      }
     }
   }
 }

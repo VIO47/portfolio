@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="about__text-1 content-section">
+      <div className="about__text-1">
         <h2>ABOUT ME 👋</h2>
         <div className="about__text-1__grid half-center-grid">
           <div className="about__text-1__1">
@@ -34,7 +34,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about__text-2 content-section">
+      <div className="about__text-2">
         <div className="about__text-2__grid">
           <div className="about__text-2__1">
             <h2>BEYOND MY 9 TO 5</h2>
@@ -58,7 +58,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about__text-3 content-section">
+      <div className="about__text-3">
         <h2>MY EDUCATION</h2>
         <div className="half-center-grid">
           <div className="about__text-3__masters">

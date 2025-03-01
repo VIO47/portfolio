@@ -1,4 +1,4 @@
-.project-card {
+.chakra-card {
   &__badges {
     gap: 6px;
     display: inline-flex;
@@ -8,8 +8,8 @@
     span {
       font-size: 14px;
       padding: 4px;
-      background-color: var(--burgundy);
-      color: white;
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
     }
   }
 
@@ -17,9 +17,8 @@
     height: 100%;
   }
 
-  .chakra-card {
     &__root {
-      background-color: var(--soft-cream);
+      background-color: var(--secondary-color);
     }
 
     &__footer {
@@ -31,19 +30,21 @@
       }
     }
 
+    &__title {
+      color: var(--accent-color);
+    }
+
     &__body {
       height: 100%;
     }
-  }
+
 }
 
 @media screen and (min-width: 680px) {
-  .project-card {
-    display: flex;
-    flex-direction: row !important;
-    &.chakra-card {
+  .chakra-card {
       &__root {
-
+        display: flex;
+        flex-direction: row !important;
         .chakra-image {
           max-width: 50vw !important;
         }
@@ -52,7 +53,5 @@
       &__body {
         height: 100%;
       }
-    }
-    
-  }
+    }    
 }

@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="home__text-1 content-section">
+      <div className="home__text-1">
         <div>
           <div className="name">
             <h1 className="title">VIOLETA-MARA MACSIM.</h1>

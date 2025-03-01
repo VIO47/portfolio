@@ -19,17 +19,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const baseURL = document.URL
   return (
     <Card.Root
-      className="project-card"
       overflow="hidden"
       variant="subtle"
       colorPalette={"teal"}
     >
       <Image src={image} alt={title} />
-      <div className="project-card__content">
+      <div className="chakra-card__content">
       <Card.Body gap="2">
         <Card.Title>{title}</Card.Title>
         <Card.Description>{description}</Card.Description>
-        <div className="project-card__badges">
+        <div className="chakra-card__badges">
           {badges.map((badge, index) => (
             <Badge key={index}>{badge}</Badge>
           ))}

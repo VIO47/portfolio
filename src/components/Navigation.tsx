@@ -1,22 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaLinkedin, FaSquareGithub } from "react-icons/fa6";
-import { IconButton } from "@chakra-ui/react";
 import "@style/Navigation.scss";
 
 const Navigation = () => {
   const location = useLocation();
 
-  const openLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/violeta-mara-macsim-941931215/", "_blank");
-  };
-
-  const openGitHub = () => {
-    window.open("https://github.com/VIO47", "_blank");
-  };
-
   return (
     <nav className="navigation">
-      <div className="navigation-tabs">
+      <div className="navigation__tabs">
         {["home", "projects"].map((path) => (
           <Link
             key={path}
@@ -28,13 +19,13 @@ const Navigation = () => {
           </Link>
         ))}
       </div>
-      <div className="navigation-icons">
-        <IconButton variant="ghost" onClick={openLinkedIn} className="icon">
+      <div className="navigation__icons">
+        <a href="https://www.linkedin.com/in/violeta-mara-macsim-941931215/" target="_blank" className="icon">
           <FaLinkedin />
-        </IconButton>
-        <IconButton variant="ghost" onClick={openGitHub} className="icon">
+        </a>
+        <a href="https://github.com/VIO47" target="_blank" className="icon">
           <FaSquareGithub />
-        </IconButton>
+        </a>
       </div>
     </nav>
   );
