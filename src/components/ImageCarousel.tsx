@@ -6,9 +6,10 @@ import "@style/ImageCarousel.scss";
 interface ImageCarouselProps {
   height: number;
   images: string[];
+  time: number;
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images, time }) => {
   const imagesLength = images.length;
   const [currentImage, setCurrentImage] = useState(0);
   const intervalRef = useRef<number>(undefined);
@@ -20,9 +21,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ height, images }) => {
 
   function activeTrack() {
     if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
+    intervalRef.current = window.setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000);
+    }, time);
   }
 
   useEffect(() => {

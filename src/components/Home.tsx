@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Badge } from "@chakra-ui/react";
-import ProfilePicture from "@resources/Photo_1.jpg";
+import ProfilePicture from "@resources/Personal_photo.jpg";
 import "@style/Home.scss";
 import About from "@/About";
 

@@ -25,6 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       colorPalette={"teal"}
     >
       <Image src={image} alt={title} />
+      <div className="project-card__content">
       <Card.Body gap="2">
         <Card.Title>{title}</Card.Title>
         <Card.Description>{description}</Card.Description>
@@ -41,6 +42,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Button>
         )}
       </Card.Footer>
+      </div>
+
     </Card.Root>
   );
 };

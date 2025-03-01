@@ -1,29 +1,32 @@
 .projects {
+  h1 {
+    font-weight: 700;
+  }
+
   padding: 1rem 2rem;
   &-code {
     padding-bottom: 10px;
 
     &__list {
       display: grid;
-      padding-top: 8px;
       gap: 12px;
     }
   }
 
   &-ux {
+    padding-top: 2rem;
     &__list {
       display: grid;
-      padding-top: 8px;
       gap: 12px;
     }
   }
 
   @media screen and (min-width: 680px) {
-    padding: 0 5rem;
+    padding: 0 8rem;
 
     .projects-code__list,
     .projects-ux__list {
-      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
     }
   }
 }

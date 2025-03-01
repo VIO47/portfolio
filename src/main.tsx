@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(rootElement as HTMLElement);
 root.render(
   <React.StrictMode>
     <ChakraProvider value={defaultSystem} >
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <App />
       </BrowserRouter>
     </ChakraProvider>

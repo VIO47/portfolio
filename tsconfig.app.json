@@ -10,7 +10,8 @@
     "paths": {
       "@/*": ["./components/*"],
       "@resources/*": ["./resources/*"],
-      "@style/*": ["./style/*"]
+      "@style/*": ["./style/*"],
+      "@utils/*": ["./utils/*"]
     },
 
     /* Bundler mode */
@@ -28,5 +29,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/main.tsx"]
 }

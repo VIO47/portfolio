@@ -1,0 +1,6 @@
+export {default as "PersonaAndrei"} from './sport-buddy/Persona-Andrei.jpg'
+export {default as "PersonaDavid"} from './sport-buddy/Persona-David.jpg'
+export {default as "PersonaEmma"} from './sport-buddy/Persona-Emma.jpg' 
+export {default as "PersonaJohn"} from './sport-buddy/Persona-John.jpg'
+export {default as "PersonaMaria"} from './sport-buddy/Persona-Maria.jpg'
+export {default as "PersonaMichael"} from './sport-buddy/Persona-Michael.jpg'

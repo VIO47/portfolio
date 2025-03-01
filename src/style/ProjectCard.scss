@@ -13,10 +13,13 @@
     }
   }
 
+  &__content {
+    height: 100%;
+  }
+
   .chakra-card {
     &__root {
-      max-width: 26rem;
-      background-color: white;
+      background-color: var(--soft-cream);
     }
 
     &__footer {
@@ -27,5 +30,29 @@
         color: white;
       }
     }
+
+    &__body {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .project-card {
+    display: flex;
+    flex-direction: row !important;
+    &.chakra-card {
+      &__root {
+
+        .chakra-image {
+          max-width: 50vw !important;
+        }
+      }
+
+      &__body {
+        height: 100%;
+      }
+    }
+    
   }
 }
