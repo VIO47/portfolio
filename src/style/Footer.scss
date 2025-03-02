@@ -1,18 +1,29 @@
 footer {
-    display: grid;
     justify-content: center;
-    padding: 2rem 1rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    display: flex;
+    z-index: 1;
+    position: relative;
+    color: var(--text-color);
 
     h3 {
         font-weight: 600;
-        color: var(--secondary-color);
+        color: var(--primary-color);
+        font-size: 0.8em;
     }
 
     p {
-        color: var(--secondary-color);
-        font-size: var(--font-size-small);
+        color: var(--text-color);
+        font-size: 0.65em;
+    }
+
+
+    .footer__content {
+        display: grid;
+        padding: 1.25rem 1rem;
+        padding-bottom: 0.75rem;
+        position: absolute;
+        justify-self: center;
+        bottom: 0;
     }
 
     .footer__1 {
@@ -29,12 +40,26 @@ footer {
             justify-content: center;
 
             svg {
-                height: 20px;
+                height: 14px;
                 width: 100%;
             }
 
             a:hover {
-                color: #e8e6e1;
+                color: color-mix(in srgb, var(--text-color) 90%, var(--secondary-color) 10%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 690px) {
+    footer {
+        .footer__content {
+            padding-bottom: 1.75rem;
+            h3 {
+                font-size: 1.25em;
+            }
+            p {
+                font-size: 0.8em;
             }
         }
     }
@@ -42,15 +67,25 @@ footer {
 
 @media screen and (min-width: 1200px) {
     footer {
-        grid-template-columns: 2fr 1fr;
-        padding: 4rem 3rem;
+        .footer__content {
+            gap: 4rem;
+            grid-template-columns: 2fr 1fr;
+            top: 50%;
+            bottom: auto;
+        }
 
+        h3 {
+            font-size: 1.5em;
+        }
         p {
-            font-size: var(--font-size-large);
+            font-size: 1em;
         }
-        
-        svg {
-            height: 30px !important;
+
+        .footer__links {
+            svg {
+                height: 24px !important;
+            }
         }
+    
     }
 }

@@ -1,5 +1,7 @@
 .about {
   width: 100%;
+  display: grid;
+  gap: 1.5rem;
 
   h2 {
     font-weight: 600;
@@ -68,12 +70,7 @@
 .half-center-grid {
   display: grid;
   justify-content: center;
-}
-
-@media screen and (max-width: 680px) {
-  .about .half-center-grid {
-    gap: 14px;
-  }
+  gap: 14px;
 }
 
 @media screen and (min-width: 680px) {
@@ -89,7 +86,7 @@
 
   .half-center-grid {
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 45px;
     align-items: start;
   }
 }
